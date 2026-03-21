@@ -95,3 +95,51 @@ $dangerBg: rgba(239, 68, 68, 0.12);
 
 .textarea { resize: vertical; min-height: 80px; }
 .formRow { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tab {
+  padding: 8px 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-size: 14px;
+  &--active { background: $primaryBg; border-color: $primary; }
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.userInfo {
+  font-size: 13px;
+  opacity: 0.75;
+}
+
+.role {
+  opacity: 0.6;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.userCard {
+  @include card(12px);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.userName { font-weight: 600; font-size: 15px; }
+.userEmail { font-size: 13px; opacity: 0.7; }
+.userRole { font-size: 11px; opacity: 0.5; text-transform: uppercase; margin-top: 2px; }
+.userActions { display: flex; gap: 8px; }
